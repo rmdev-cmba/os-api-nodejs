@@ -21,7 +21,8 @@ app.use((req, res, next) => {
     next();
 });
 
-mongoose.connect('mongodb://localhost/os_local', {
+mongoose.connect('mongodb://ordemservico:ord159753@mongo_ordemservico:27017/ordemservico', {
+/*mongoose.connect('mongodb://localhost/os_local', {*/
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(() => {
