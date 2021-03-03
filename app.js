@@ -101,6 +101,13 @@ app.post('/orcamento', async (req, res) => {
 
 });
 
+/*
 app.listen(8080, () => {
     console.log("Servidor iniciado na porta 8080: http://localhost:8080");
-})
+})*/
+
+/* uso na web */
+var port = process.env.PORT || 3000;
+app.listen(port, ()=> {
+    console.log('Servidor inicidado na porta ', port)
+});
