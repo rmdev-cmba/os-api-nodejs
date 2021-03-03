@@ -21,7 +21,7 @@ app.use((req, res, next) => {
     next();
 });
 
-mongoose.connect('mongodb://ordemservico:ord159753@mongo_ordemservico:27017/ordemservico', {
+mongoose.connect('mongodb://servicoapi:api429837@mongo_servicoapi:27017/servicoapi', {
 /*mongoose.connect('mongodb://localhost/os_local', {*/
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -110,5 +110,5 @@ app.listen(8080, () => {
 /* uso na web */
 var port = process.env.PORT || 3000;
 app.listen(port, ()=> {
-    console.log('Servidor inicidado na porta ', port)
+    console.log('Servidor inicidado na porta ', port,' em http://eletroapi-com-br.umbler.net/ ')
 });
