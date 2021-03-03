@@ -65,7 +65,7 @@ app.post('/orcamento', async (req, res) => {
         }
 
         await transport.sendMail(emailSendInfo, function (err) {
-            console.log('email')
+            
             if (err) return res.status(400).json({
                 error: true,
                 message: "Erro: Email de orçamento não enviada com sucesso!"
@@ -75,7 +75,7 @@ app.post('/orcamento', async (req, res) => {
     };
 
     await Orcamento.create(data, (err) => {
-        console.log('gravando')
+        
         if (err) return res.status(400).json({
             error: true,
             message: "Erro: Solicitação de orçamento não salvo, tente novamente, mas chegou na api!"
